@@ -37,6 +37,13 @@ public class MainActivity extends AppCompatActivity {
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
 
+        TextView tv = findViewById(R.id.textview_first);
+        String text = tv.getText().toString();
+        if (text.isBlank()) {
+            tv.setText("Thanks for choosing this Guided Project,\n" +
+                    "hope you enjoyed it :)");
+        }
+
         binding.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
