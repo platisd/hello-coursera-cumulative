@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
         TextView tv = findViewById(R.id.textview_first);
         String text = tv.getText().toString();
-        if (text.isBlank()) {
+        if (text.isBlank()) { // String.isBlank() is a method introduced in Android API 33
             tv.setText("Thanks for choosing this Guided Project,\n" +
                     "hope you enjoyed it :)");
         }
